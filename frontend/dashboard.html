@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+       
+        <header class="header">
+            <div class="header-content">
+                <h1>Healthcare</h1>
+                <div class="user-info">
+                    <span id="userName">Welcome, User</span>
+                    <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+                </div>
+            </div>
+        </header>
+
+       
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="patients">Patients</button>
+            <button class="tab-btn" data-tab="doctors">Doctors</button>
+            <button class="tab-btn" data-tab="mappings">Patient-Doctor Mappings</button>
+        </nav>
+
+       
+        <main class="main-content">
+           
+            <section id="patients" class="tab-content active">
+                <div class="section-header">
+                    <h2>Patients List</h2>
+                    <button id="addPatientBtn" class="btn btn-primary">Add Patient</button>
+                </div>
+                
+                <div id="patientList" class="data-list">
+                   
+                </div>
+
+               
+                <div id="patientModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="patientModalTitle">Add Patient</h3>
+                            <span class="close">&times;</span>
+                        </div>
+                        <form id="patientForm" class="modal-form">
+                            <div class="form-group">
+                                <label for="patientName">Name:</label>
+                                <input type="text" id="patientName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="patientAge">Age:</label>
+                                <input type="number" id="patientAge" required min="1" max="150">
+                            </div>
+                            <div class="form-group">
+                                <label for="patientDisease">Disease:</label>
+                                <input type="text" id="patientDisease" required>
+                            </div>
+                            <div class="modal-actions">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary close">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+           
+            <section id="doctors" class="tab-content">
+                <div class="section-header">
+                    <h2>Doctors List</h2>
+                    <button id="addDoctorBtn" class="btn btn-primary">Add Doctor</button>
+                </div>
+                
+                <div id="doctorList" class="data-list">
+                   
+                </div>
+
+                
+                <div id="doctorModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 id="doctorModalTitle">Add Doctor</h3>
+                            <span class="close">&times;</span>
+                        </div>
+                        <form id="doctorForm" class="modal-form">
+                            <div class="form-group">
+                                <label for="doctorName">Name:</label>
+                                <input type="text" id="doctorName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="doctorSpecialization">Specialization:</label>
+                                <input type="text" id="doctorSpecialization" required>
+                            </div>
+                            <div class="modal-actions">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary close">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            
+            <section id="mappings" class="tab-content">
+                <div class="section-header">
+                    <h2>Patient-Doctor Mappings</h2>
+                    <button id="addMappingBtn" class="btn btn-primary">Add Mapping</button>
+                </div>
+                
+                <div id="mappingList" class="data-list">
+                   
+                </div>
+
+               
+                <div id="mappingModal" class="modal">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Add Patient-Doctor Mapping</h3>
+                            <span class="close">&times;</span>
+                        </div>
+                        <form id="mappingForm" class="modal-form">
+                            <div class="form-group">
+                                <label for="mappingPatient">Patient:</label>
+                                <select id="mappingPatient" required>
+                                    <option value="">Select Patient</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="mappingDoctor">Doctor:</label>
+                                <select id="mappingDoctor" required>
+                                    <option value="">Select Doctor</option>
+                                </select>
+                            </div>
+                            <div class="modal-actions">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="button" class="btn btn-secondary close">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+   
+    <div id="messageContainer" class="message-container"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
