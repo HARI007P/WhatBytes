@@ -52,7 +52,7 @@ app.get("/api/health", (req, res) => {
 
 
 app.use((err, req, res, next) => {
-  console.error("❌ Error:", err.stack);
+  console.error(" Error:", err.stack);
   res.status(500).json({
     message: "Something went wrong!",
     error:
@@ -75,9 +75,9 @@ app.use("*", (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, async () => {
-  console.log(`🚀 Server running on port ${PORT}`);
-  console.log(`🌍 Environment: ${process.env.NODE_ENV || "development"}`);
-  console.log(`📌 Access: http://localhost:${PORT}`);
+  console.log(` Server running on port ${PORT}`);
+  console.log(` Environment: ${process.env.NODE_ENV || "development"}`);
+  console.log(` Access: http://localhost:${PORT}`);
 
   
   await createTables();
