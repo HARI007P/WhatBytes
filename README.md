@@ -15,14 +15,16 @@ This project helps manage doctors, patients, and appointments in a user-friendly
 
 ## 📷 Screenshots
 
-### 🔑 Login Page
-![Login Page](./screenshots/login.png)
+
 
 ### 👨‍⚕️ Doctors Dashboard
 ![Doctors Dashboard](./screenshots/doctors.png)
 
 ### 🧑‍🤝‍🧑 Patients Dashboard
 ![Patients Dashboard](./screenshots/patients.png)
+
+### 🧑‍🤝‍🧑 Patient-doctor Dashboard
+![Patients Dashboard](./screenshots/mapping.png)
 
 ---
 
